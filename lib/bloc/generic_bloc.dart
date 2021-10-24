@@ -8,5 +8,5 @@ class GenericBloc<T> {
   void addObject(Object T) => _controller.add(T);
 
   //pegando os dados e passando por um funil
-  get streamns => _controller.stream;
+  get streamCepBloc => _controller.stream;
 }

@@ -5,10 +5,10 @@ import 'package:busca_cep/services/cep_services.dart';
 class CepBloc extends GenericBloc<UserCep> {
   getCep(cep) async {
     try {
-      UserCep cepResponse = await CepServices.getCep(cep);
-      addObject(cepResponse);
+      UserCep? cepResponse = await CepServices.getCep(cep);
+      addObject(cepResponse!);
     } catch (e) {
-      return e;
+      return null;
     }
   }
 }
